@@ -18,7 +18,9 @@ const apiKey = Deno.env.get("OPENAI_API_KEY");
 assert(apiKey, "failed to get openAI API key");
 
 const openai = new OpenAI({
-  apiKey: apiKey,
+  // apiKey: apiKey,
+  apiKey: 'EMPTY',
+  baseUrl: 'http://192.168.8.240:55000/v1'
 });
 
 export async function getCode(
